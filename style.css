@@ -1,0 +1,102 @@
+/* Import font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variabel CSS untuk tema berbeda */
+:root {
+  --siswa-gradient: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  --siswa-accent: #3498db;
+  --siswa-light: #e7f5fd;
+  
+  --guru-gradient: linear-gradient(135deg, #16a085 0%, #2ecc71 100%);
+  --guru-accent: #16a085;
+  --guru-light: #e8f8f5;
+  
+  --admin-gradient: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+  --admin-accent: #8e44ad;
+  --admin-light: #f4ecf7;
+  
+  --login-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f9fafb;
+}
+
+/* Styling untuk halaman Login */
+body.bg-light {
+  background: var(--login-gradient);
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Card styling umum */
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 2rem !important;
+}
+
+/* Tema untuk siswa */
+body.siswa-theme {
+  background-color: var(--siswa-light);
+}
+
+.siswa-theme .navbar {
+  background: var(--siswa-gradient) !important;
+}
+
+/* Tema untuk guru */
+body.guru-theme {
+  background-color: var(--guru-light);
+}
+
+.guru-theme .navbar {
+  background: var(--guru-gradient) !important;
+}
+
+/* Tema untuk admin */
+body.admin-theme {
+  background-color: var(--admin-light);
+}
+
+.admin-theme .navbar {
+  background: var(--admin-gradient) !important;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(to right, currentColor, transparent);
+  border-radius: 10px;
+}
